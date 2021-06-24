@@ -1,0 +1,138 @@
+/* footer */
+footer {
+    padding:60px 0;
+    background:#444;
+    @include mobile {
+        padding:30px 0;
+    }
+    .foot-cont {
+        display:flex;
+        @include contArea;
+        @include mobile {
+            flex-wrap:wrap;
+        }
+        .foot-right {
+            order:1;
+            margin-left:auto;
+            text-align:right;
+            @include mobile {
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                order:-1;
+                width:100%;
+                text-align:left;
+                .logo {
+                    img {
+                        width:160px;
+                    }
+                }
+            }
+            .sns-links {
+                margin-top:35px;
+                font-size:0;
+                @include mobile {
+                    margin-top:0;
+                }
+                li {
+                    display:inline-block;
+                    vertical-align:top;
+                    margin-left:15px;
+                    &:first-child {
+                        margin-left:0;
+                    }
+                    a {
+                        display:block;
+                        width:41px;
+                        height:39px;
+                        background-size:100%;
+                        background-repeat:no-repeat;
+                        background-position:center;
+                        opacity:0.5;
+                        transition:opacity 0.2s linear;
+                        @include mobile {
+                            width:35px;
+                            height:33px;
+                        }
+                        &.sns01 {
+                            background-image:url('/images/icon/icon-sns01.png');
+                        }
+                        &.sns02 {
+                            background-image:url('/images/icon/icon-sns02.png');
+                        }
+                        &:hover {
+                            opacity:1;
+                        }
+                    }
+                }
+            }
+        }
+        .foot-left {
+            width:calc(100% - 230px);
+            max-width:730px;
+            @include mobile {
+                width:100%;
+                max-width:none;
+                margin-top:30px;
+            }
+            .links {
+                font-size:0;
+                li {
+                    display:inline-block;
+                    vertical-align:top;
+                    margin-left:30px;
+                    &:first-child {
+                        margin-left:0;
+                    }
+                    a {
+                        display:block;
+                        color:#eee;
+                        font-size:16px;
+                        @include mobile {
+                            font-size:14px;
+                        }
+                    }
+                }
+            }
+            .infos {
+                margin-top:30px;
+                font-size:0;
+                @include mobile {
+                    margin-top:20px;
+                }
+                p {
+                    display:inline-block;
+                    vertical-align:top;
+                    margin-top:20px;
+                    margin-right:15px;
+                    color:#ccc;
+                    font-size:15px;
+                    @include mobile {
+                        font-size:12px;
+                        margin-top:10px;
+                    }
+                    span {
+                        &::after {
+                            content:' ';
+                            display:inline-block;
+                            vertical-align:top;
+                            width:1px;
+                            height:11px;
+                            margin:2px 6px 0;
+                            background:#ccc;
+                        }
+                    }
+                }
+            }
+            .copyright {
+                margin-top:50px;
+                color:#999;
+                font-size:15px;
+                @include mobile {
+                    margin-top:20px;
+                    font-size:12px;
+                }
+            }
+        }
+    }
+}

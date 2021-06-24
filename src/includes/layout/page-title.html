@@ -1,0 +1,141 @@
+<!-- page category title -->
+<div class="page-title">
+    @@if(context.cate01){<h2 class="title">회사소개</h2>}
+    @@if(context.cate02){<h2 class="title">제품소개</h2>}
+    @@if(context.cate03){<h2 class="title">제작설치</h2>}
+    @@if(context.cate04){<h2 class="title">온라인문의</h2>}
+    @@if(context.cate05){<h2 class="title">고객지원</h2>}
+</div>
+<!-- // page category title -->
+<!-- sub depth -->
+<div class="sub-depth-wrap">
+    <div class="area">
+        <span class="home" aria-hidden="true"></span>
+        <div class="dropdown-menu">
+            @@if(context.cate01){<a href="#n" class="selected"><span>회사소개</span></a>}
+            @@if(context.cate02){<a href="#n" class="selected"><span>제품소개</span></a>}
+            @@if(context.cate03){<a href="#n" class="selected"><span>제작설치</span></a>}
+            @@if(context.cate04){<a href="#n" class="selected"><span>온라인문의</span></a>}
+            @@if(context.cate05){<a href="#n" class="selected"><span>고객지원</span></a>}
+            <ul class="dropdown-list">
+                <li><a href="/page/sub_01_01.html"@@if(context.cate01){ class="active"}><span>회사소개</span></a></li>
+                <li><a href="/page/sub_02_01.html"@@if(context.cate02){ class="active"}><span>제품소개</span></a></li>
+                <li><a href="/page/sub_03_01.html"@@if(context.cate03){ class="active"}><span>제작설치</span></a></li>
+                <li><a href="/page/sub_04_01.html"@@if(context.cate04){ class="active"}><span>온라인문의</span></a></li>
+                <li><a href="/page/sub_05_01.html"@@if(context.cate05){ class="active"}><span>고객지원</span></a></li>
+            </ul>
+        </div>
+        @@if(context.cate01){
+        <div class="dropdown-menu">
+            @@if(context.cate01 === '01'){<a href="#n" class="selected"><span>인사말</span></a>}
+            @@if(context.cate01 === '02'){<a href="#n" class="selected"><span>회사개요</span></a>}
+            @@if(context.cate01 === '03'){<a href="#n" class="selected"><span>사업분야</span></a>}
+            @@if(context.cate01 === '04'){<a href="#n" class="selected"><span>회사연혁</span></a>}
+            @@if(context.cate01 === '05'){<a href="#n" class="selected"><span>인증서현황</span></a>}
+            @@if(context.cate01 === '06'){<a href="#n" class="selected"><span>조직도</span></a>}
+            @@if(context.cate01 === '07'){<a href="#n" class="selected"><span>협력사</span></a>}
+            @@if(context.cate01 === '08'){<a href="#n" class="selected"><span>오시는 길</span></a>}
+            <ul class="dropdown-list">
+                <li><a href="/page/sub_01_01.html"@@if(context.cate01 === '01'){ class="active"}><span>인사말</span></a></li>
+                <li><a href="/page/sub_01_02.html"@@if(context.cate01 === '02'){ class="active"}><span>회사개요</span></a></li>
+                <li><a href="/page/sub_01_03.html"@@if(context.cate01 === '03'){ class="active"}><span>사업분야</span></a></li>
+                <li><a href="/page/sub_01_04.html"@@if(context.cate01 === '04'){ class="active"}><span>회사연혁</span></a></li>
+                <li><a href="/page/sub_01_05.html"@@if(context.cate01 === '05'){ class="active"}><span>인증서현황</span></a></li>
+                <li><a href="/page/sub_01_06.html"@@if(context.cate01 === '06'){ class="active"}><span>조직도</span></a></li>
+                <li><a href="/page/sub_01_07.html"@@if(context.cate01 === '07'){ class="active"}><span>협력사</span></a></li>
+                <li><a href="/page/sub_01_08.html"@@if(context.cate01 === '08'){ class="active"}><span>오시는 길</span></a></li>
+            </ul>
+        </div>
+        }
+        @@if(context.cate02){
+        <div class="dropdown-menu">
+            @@if(context.cate02 === '01'){<a href="#n" class="selected"><span>크레인주행 전원공급장치</span></a>}
+            @@if(context.cate02 === '02'){<a href="#n" class="selected"><span>크레인횡행 전원공급장치</span></a>}
+            @@if(context.cate02 === '03'){<a href="#n" class="selected"><span>크레인전장 부속품</span></a>}
+            @@if(context.cate02 === '04'){<a href="#n" class="selected"><span>크레인 철강재</span></a>}
+            @@if(context.cate02 === '05'){<a href="#n" class="selected"><span>호이스트</span></a>}
+            <ul class="dropdown-list">
+                <li><a href="/page/sub_02_01.html"@@if(context.cate02 === '01'){ class="active"}><span>크레인주행 전원공급장치</span></a></li>
+                <li><a href="/page/sub_02_02.html"@@if(context.cate02 === '02'){ class="active"}><span>크레인횡행 전원공급장치</span></a></li>
+                <li><a href="/page/sub_02_03.html"@@if(context.cate02 === '03'){ class="active"}><span>크레인전장 부속품</span></a></li>
+                <li><a href="/page/sub_02_04.html"@@if(context.cate02 === '04'){ class="active"}><span>크레인 철강재</span></a></li>
+                <li><a href="/page/sub_02_05.html"@@if(context.cate02 === '05'){ class="active"}><span>호이스트</span></a></li>
+            </ul>
+        </div>
+        }
+        @@if(context.cate03){
+        <div class="dropdown-menu">
+            @@if(context.cate03 === '01'){<a href="#n" class="selected"><span>I-Beam 헹거설치</span></a>}
+            @@if(context.cate03 === '02'){<a href="#n" class="selected"><span>I-Beam 거더 호이스트</span></a>}
+            @@if(context.cate03 === '03'){<a href="#n" class="selected"><span>강철 레일바</span></a>}
+            @@if(context.cate03 === '04'){<a href="#n" class="selected"><span>겐트리 크레인</span></a>}
+            @@if(context.cate03 === '05'){<a href="#n" class="selected"><span>더블 호이스트</span></a>}
+            @@if(context.cate03 === '06'){<a href="#n" class="selected"><span>모노레일 호이스트</span></a>}
+            @@if(context.cate03 === '07'){<a href="#n" class="selected"><span>서스펜션 호이스트</span></a>}
+            @@if(context.cate03 === '08'){<a href="#n" class="selected"><span>싱글 호이스트</span></a>}
+            @@if(context.cate03 === '09'){<a href="#n" class="selected"><span>연단동 호이스트</span></a>}
+            @@if(context.cate03 === '10'){<a href="#n" class="selected"><span>자동화라인</span></a>}
+            @@if(context.cate03 === '11'){<a href="#n" class="selected"><span>지브 크레인</span></a>}
+            @@if(context.cate03 === '12'){<a href="#n" class="selected"><span>철트랙</span></a>}
+            @@if(context.cate03 === '13'){<a href="#n" class="selected"><span>친자 호이스트</span></a>}
+            @@if(context.cate03 === '14'){<a href="#n" class="selected"><span>콤팩트바</span></a>}
+            @@if(context.cate03 === '15'){<a href="#n" class="selected"><span>트로리바</span></a>}
+            <ul class="dropdown-list">
+                <li><a href="/page/sub_03_01.html"@@if(context.cate03 === '01'){ class="active"}><span>I-Beam 헹거설치</span></a></li>
+                <li><a href="/page/sub_03_02.html"@@if(context.cate03 === '02'){ class="active"}><span>I-Beam 거더 호이스트</span></a></li>
+                <li><a href="/page/sub_03_03.html"@@if(context.cate03 === '03'){ class="active"}><span>강철 레일바</span></a></li>
+                <li><a href="/page/sub_03_04.html"@@if(context.cate03 === '04'){ class="active"}><span>겐트리 크레인</span></a></li>
+                <li><a href="/page/sub_03_05.html"@@if(context.cate03 === '05'){ class="active"}><span>더블 호이스트</span></a></li>
+                <li><a href="/page/sub_03_06.html"@@if(context.cate03 === '06'){ class="active"}><span>모노레일 호이스트</span></a></li>
+                <li><a href="/page/sub_03_07.html"@@if(context.cate03 === '07'){ class="active"}><span>서스펜션 호이스트</span></a></li>
+                <li><a href="/page/sub_03_08.html"@@if(context.cate03 === '08'){ class="active"}><span>싱글 호이스트</span></a></li>
+                <li><a href="/page/sub_03_09.html"@@if(context.cate03 === '09'){ class="active"}><span>연단동 호이스트</span></a></li>
+                <li><a href="/page/sub_03_10.html"@@if(context.cate03 === '10'){ class="active"}><span>자동화라인</span></a></li>
+                <li><a href="/page/sub_03_11.html"@@if(context.cate03 === '11'){ class="active"}><span>지브 크레인</span></a></li>
+                <li><a href="/page/sub_03_12.html"@@if(context.cate03 === '12'){ class="active"}><span>철트랙</span></a></li>
+                <li><a href="/page/sub_03_13.html"@@if(context.cate03 === '13'){ class="active"}><span>친자 호이스트</span></a></li>
+                <li><a href="/page/sub_03_14.html"@@if(context.cate03 === '14'){ class="active"}><span>콤팩트바</span></a></li>
+                <li><a href="/page/sub_03_15.html"@@if(context.cate03 === '15'){ class="active"}><span>트로리바</span></a></li>
+            </ul>
+        </div>
+        }
+        @@if(context.cate04){
+        <div class="dropdown-menu">
+            @@if(context.cate04 === '01'){<a href="#n" class="selected"><span>상담신청</span></a>}
+            @@if(context.cate04 === '02'){<a href="#n" class="selected"><span>카탈로그</span></a>}
+            <ul class="dropdown-list">
+                <li><a href="/page/sub_04_01.html"@@if(context.cate04 === '01'){ class="active"}><span>상담신청</span></a></li>
+                <li><a href="/page/sub_04_02.html"@@if(context.cate04 === '02'){ class="active"}><span>카탈로그</span></a></li>
+            </ul>
+        </div>
+        }
+        @@if(context.cate05){
+        <div class="dropdown-menu">
+            @@if(context.cate05 === '01'){<a href="#n" class="selected"><span>뉴스&amp;공지</span></a>}
+            <ul class="dropdown-list">
+                <li><a href="/page/sub_05_01.html"@@if(context.cate05 === '01'){ class="active"}><span>뉴스&amp;공지</span></a></li>
+            </ul>
+        </div>
+        }
+        @@if(context.dep2){
+            <div class="dropdown-menu">
+                <a href="#n" class="selected"><span>트로리바</span></a>
+                <ul class="dropdown-list">
+                    <li><a href="/page/sub_02_01_01.html" class="active"><span>트로리바</span></a></li>
+                </ul>
+            </div>
+        }
+        @@if(context.dep3){
+            <div class="dropdown-menu">
+                <a href="#n" class="selected"><span>트로리바</span></a>
+                <ul class="dropdown-list">
+                    <li><a href="/page/sub_02_01_01_01.html" class="active"><span>트로리바</span></a></li>
+                </ul>
+            </div>
+        }
+    </div>
+</div>
+<!-- // sub depth -->
+<!-- page title -->
+<h3 class="sub-page-title@@if(context.cate02){ type2}">@@title</h3>
+<!-- // page title -->

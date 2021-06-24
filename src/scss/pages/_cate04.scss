@@ -1,0 +1,56 @@
+/* 온라인문의 */
+.catalogue {
+    display:flex;
+    justify-content:space-between;
+    @include mobile {
+        display:block;
+    }
+    .infos {
+        @include calcs(padding-top, 80px, 1200px);
+        @include mobile {
+            padding-top:0;
+        }
+        .tit {
+            font-size:38px;
+            font-weight:500;
+            @include mobile {
+                font-size:30px;
+            }
+            small {
+                display:block;
+                margin-bottom:15px;
+                font-size:20px;
+                font-weight:400;
+                @include mobile {
+                    font-size:16px;
+                }
+            }
+        }
+        .desc {
+            margin-top:40px;
+            @include font;
+            @include mobile {
+                margin-top:20px;
+            }
+        }
+        .btn {
+            display:block;
+            width:220px;
+            margin-top:70px;
+            @include mobile {
+                margin-top:20px;
+            }
+        }
+    }
+    .img {
+        @include calcs(width, 510px, 1200px);
+        @include mobile {
+            width:100%;
+            margin-top:50px;
+        }
+        img {
+            display:block;
+            box-shadow:0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<div class="list-filter">
+    <div class="search-wrap">
+        <span class="input-wrap">
+            <input type="text" class="form-control" placeholder="제품명을 입력하세요" aria-label="검색할 제품명을 입력하세요">
+        </span>
+        <button type="submit" class="btn-search"><span class="blind">검색</span></button>
+    </div>
+</div>
+<div class="product-list-wrap">
+    <ul class="lists">
+        @@for(var i=0; i < list.length; i++){
+        <li>
+            <a href="@@sub.html" class="inner">
+                <span class="thumb" style="background-image:url('/images/img/img-product.jpg');"></span>
+                <p><span>`+list[i]+`</span></p>
+            </a>
+        </li>
+        }
+    </ul>
+</div>

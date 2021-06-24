@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container cate01">
+            @@include('./layout/page-title.html', {
+                cate01 : '04',
+                title : '회사연혁'
+            })
+            <div class="page-contents">
+                <div class="history">
+                    <div class="btn-tab-wraps">
+                        <ul class="tabs" role="tablist" data-toggle="tab">
+                            <li role="presentation"><button type="button" id="tab01-tit" data-target="#tab01" role="tab" aria-controls="tab01" aria-selected="true">현재 ~ 2016</li>
+                            <li role="presentation"><button type="button" id="tab02-tit" data-target="#tab02" role="tab" aria-controls="tab02" aria-selected="false">2015 ~ 2011</li>
+                            <li role="presentation"><button type="button" id="tab03-tit" data-target="#tab03" role="tab" aria-controls="tab03" aria-selected="false">2010 ~ 2006</li>
+                            <li role="presentation"><button type="button" id="tab04-tit" data-target="#tab04" role="tab" aria-controls="tab04" aria-selected="false">2005 ~ 1999</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents">
+                        <div id="tab01" role="tabpanel" aria-labelledby="tab01-tit">
+                            <div class="tit-wrap tab01">
+                                <h4><small>대성의 연혁</small>현재 ~ 2016</h4>
+                            </div>
+                            <ul class="history-lists">
+                                <li class="years">
+                                    <h5 class="year">2019</h5>
+                                    <ul class="lists">
+                                        <li><p>생산설비라인 확장 및 산업설비기계 도입 예정</p></li>
+                                    </ul>
+                                </li>
+                                <li class="years">
+                                    <h5 class="year">2018</h5>
+                                    <ul class="lists">
+                                        <li><p>쌍용 ALC 업체등록</p></li>
+                                        <li><p>한국타이어 업체등록</p></li>
+                                        <li><p>제 3공장 증축, 착공</p></li>
+                                    </ul>
+                                </li>
+                                <li class="years">
+                                    <h5 class="year">2017</h5>
+                                    <ul class="lists">
+                                        <li><p>제 3공장 Hoist Crane 제작소 확장부지 매입 약 4,779m²(건물 약,400평)</p></li>
+                                    </ul>
+                                </li>
+                                <li class="years">
+                                    <h5 class="year">2016</h5>
+                                    <ul class="lists">
+                                        <li><p>롯데케미칼 업체등록</p></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="tab02" role="tabpanel" aria-labelledby="tab02-tit">
+                            <div class="tit-wrap tab02">
+                                <h4><small>대성의 연혁</small>2015 ~ 2011</h4>
+                            </div>
+                            <ul class="history-lists">
+                                <li class="years">
+                                    <h5 class="year">2015</h5>
+                                    <ul class="lists">
+                                        <li><p>건축물 리프트 전원공급기 특허 및 디자인 등록(4점)</p></li>
+                                        <li><p>대성기업㈜ → 대성기업호이스트㈜ 상호변경</p></li>
+                                    </ul>
+                                </li>
+                                <li class="years">
+                                    <h5 class="year">2013</h5>
+                                    <ul class="lists">
+                                        <li><p>전원공급장치 Trolley Bar 및 부품 각종디자인 등록(13점)</p></li>
+                                        <li><p>주행 Rail, 주행 Wheel</p></li>
+                                        <li><p>수자원공사 업체등록</p></li>
+                                        <li><p>풍산 발리녹스 업체등록</p></li>
+                                        <li><p>제조공장 확장부지 매입 약 1,411m²</p></li>
+                                    </ul>
+                                </li>
+                                <li class="years">
+                                    <h5 class="year">2012</h5>
+                                    <ul class="lists">
+                                        <li><p>대성기업㈜ 설립</p></li>
+                                        <li><p>직원 기숙사 및 사무동 증축완공</p></li>
+                                    </ul>
+                                </li>
+                                <li class="years">
+                                    <h5 class="year">2011</h5>
+                                    <ul class="lists">
+                                        <li><p>CJ제일제당 업체등록</p></li>
+                                        <li><p>중소기업 신용평가등록</p></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="tab03" role="tabpanel" aria-labelledby="tab03-tit">
+                            <div class="tit-wrap tab03">
+                                <h4><small>대성의 연혁</small>2010 ~ 2006</h4>
+                            </div>
+                            <ul class="history-lists">
+                                <li class="years">
+                                    <h5 class="year">2010</h5>
+                                    <ul class="lists">
+                                        <li><p>자동절단기 생산라인 설비</p></li>
+                                        <li><p>경기여성교류회 회원 , IBK 기업은행 여성경영자 회원</p></li>
+                                    </ul>
+                                </li>
+                                <li class="years">
+                                    <h5 class="year">2009</h5>
+                                    <ul class="lists">
+                                        <li><p>포스코 업체등록</p></li>
+                                        <li><p>두산중공업 업체등록</p></li>
+                                        <li><p>Copper Head Rail Bar 생산설비</p></li>
+                                        <li><p>Heavy Bar 생산설비</p></li>
+                                    </ul>
+                                </li>
+                                <li class="years">
+                                    <h5 class="year">2008</h5>
+                                    <ul class="lists">
+                                        <li><p>공장이전(자가 화성시 팔탄면 소재) 1,500m²(건물 약 350평)</p></li>
+                                    </ul>
+                                </li>
+                                <li class="years">
+                                    <h5 class="year">2007</h5>
+                                    <ul class="lists">
+                                        <li><p>조달청등록 , 직접생산증명서 취득</p></li>
+                                    </ul>
+                                </li>
+                                <li class="years">
+                                    <h5 class="year">2006</h5>
+                                    <ul class="lists">
+                                        <li><p>Crane 제작 , 생산설비</p></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="tab04" role="tabpanel" aria-labelledby="tab04-tit">
+                            <div class="tit-wrap tab04">
+                                <h4><small>대성의 연혁</small>2005 ~ 1999</h4>
+                            </div>
+                            <ul class="history-lists">
+                                <li class="years">
+                                    <h5 class="year">2005</h5>
+                                    <ul class="lists">
+                                        <li><p>공장 확장이전(경기도 군포시 소재)</p></li>
+                                    </ul>
+                                </li>
+                                <li class="years">
+                                    <h5 class="year">2003</h5>
+                                    <ul class="lists">
+                                        <li><p>사출, Forming Machine 설비 라인 및 부품  금형 설비</p></li>
+                                    </ul>
+                                </li>
+                                <li class="years">
+                                    <h5 class="year">2002</h5>
+                                    <ul class="lists">
+                                        <li><p>Festoon Track Cable System 생산 라인설비</p></li>
+                                        <li><p>Compact Trolley Bar 및 각종부품 시험성적서 인증</p></li>
+                                        <li><p>I-Beam Hanger 생산라인 설비</p></li>
+                                    </ul>
+                                </li>
+                                <li class="years">
+                                    <h5 class="year">1999</h5>
+                                    <ul class="lists">
+                                        <li><p>전원공급장치 System 생산 라인설비</p></li>
+                                        <li><p>대성기업 설립</p></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+
+    <script>
+        uiTab();
+    </script>
+</body>
+</html>

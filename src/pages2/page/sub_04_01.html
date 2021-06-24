@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container cate04">
+            @@include('./layout/page-title.html', {
+                cate04 : '01',
+                title : '상담신청'
+            })
+            <div class="page-contents">
+                @@include('./modules/input-table.html', {
+                    sub0401 : true,
+                    agree : true
+                })
+                <div class="btn-group">
+                    <button type="button" class="btn btn-lg btn-border-point no-round"><span>취소</span></button>
+                    <button type="button" class="btn btn-lg btn-point no-round"><span>문의하기</span></button>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

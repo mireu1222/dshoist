@@ -1,0 +1,185 @@
+/* form */
+.form-wrap {
+    .row {
+        display:flex;
+        align-items:center;
+        margin-top:5px;
+        &:first-child {
+            margin-top:0;
+        }
+        > * {
+            margin-left:5px;
+            &:first-child {
+                margin-left:0;
+            }
+        }
+        .form-control.auto {
+            width:50%;
+            max-width:200px;
+            @include mobile {
+                width:100%;
+            }
+        }
+        .form-control.half {
+            flex:1;
+            max-width:360px;
+        }
+        .btn {
+            font-size:14px;
+            @include mobile {
+                font-size:13px;
+            }
+        }
+        > label {
+            padding-right:20px;
+            @include font;
+            font-weight:700;
+        }
+        &.m-col {
+            @include mobile {
+                flex-direction:column;
+                > * {
+                    width:100%;
+                    margin:0;
+                    margin-top:5px;
+                    &:first-child {
+                        margin-top:0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* file upload */
+.inputfile-wrap {
+    position:relative;
+    font-size:0;
+    input[type="file"] {
+        position:absolute;
+        width:1px;
+        height:1px;
+        margin:-1px;
+        padding:0;
+        border:0;
+        overflow:hidden;
+        clip:rect(0, 0, 0, 0);
+    }
+    .form-control {
+        display:inline-block;
+        width:calc(100% - 95px);
+    }
+    label {
+        display:inline-block;
+        width:90px;
+        margin-left:5px;
+    }
+}
+
+/* search */
+.list-filter {
+    display:flex;
+    margin-bottom:50px;
+    .search-wrap {
+        display:flex;
+        width:100%;
+        max-width:420px;
+        margin-left:auto;
+        border-radius:30px;
+        box-shadow:0px 0px 15px 0px rgba(217, 217, 217, 0.75);
+        @include mobile {
+            width:100%;
+            max-width:100%;
+        }
+        .selectbox-wrap {
+            .nice-select {
+                min-width:140px;
+                height:50px;
+                color:$point;
+                font-size:16px;
+                line-height:48px;
+                border-radius:0;
+                border-color:$point;
+                &::after {
+                    border-color:$point;
+                }
+                @include mobile {
+                    min-width:110px;
+                    font-size:14px;
+                    height:40px;
+                    line-height:38px;
+                }
+                &.open .list {
+                    border-radius:0;
+                }
+                .option {
+                    min-height:50px;
+                    line-height:50px;
+                    @include mobile {
+                        min-height:40px;
+                        line-height:40px;
+                    }
+                    &:hover,
+                    &.focus,
+                    &.selected,
+                    &.selected.focus {
+                        background-color:$point;
+                        color:$white;
+                    }
+                }
+                .list:hover .option:not(:hover) {
+                    color:$point;
+                    background-color:transparent;
+                }
+            }
+        }
+        .input-wrap {
+            flex:1;
+            input {
+                height:60px;
+                padding:12px 30px;
+                padding-right:0;
+                border-radius:0;
+                border-color:transparent;
+                font-size:18px;
+                &::placeholder,
+                &::-webkit-input-placeholder {
+                    font-size:16px;
+                }
+            }
+        }
+        .btn-search {
+            display:block;
+            width:60px;
+            height:60px;
+            background:url('/images/icon/icon-search.png') center no-repeat;
+        }
+    }
+}
+
+// 개인정보수집동의
+.agree-chk-box {
+    margin-top:40px;
+    @include mobile {
+        margin-top:20px;
+    }
+    .tit {
+        margin-bottom:10px;
+        @include font-lg;
+        font-weight:700;
+    }
+    .agree-cont {
+        max-height:200px;
+        padding:20px;
+        border:1px solid $border;
+        overflow-y:auto;
+        @include font-sm;
+        color:$cont;
+        @include mobile {
+            padding:12px;
+        }
+    }
+    .chk-wrap {
+        margin-top:10px;
+    }
+}

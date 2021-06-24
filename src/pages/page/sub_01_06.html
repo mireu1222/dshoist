@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container cate01">
+            @@include('./layout/page-title.html', {
+                cate01 : '06',
+                title : '조직도'
+            })
+            <div class="page-contents">
+                <div class="organization-chart">
+                    <h4 class="org ceo"><span>대표이사</span></h4>
+                    <ul class="lists">
+                        <li>
+                            <h5 class="org lv1"><span>영업본부</span></h5>
+                            <ul class="lv2-lists">
+                                <li><h6 class="org lv2"><span>영업1팀/영업관리</span></h6></li>
+                                <li><h6 class="org lv2"><span>영업2팀/현장관리</span></h6></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5 class="org lv1"><span>관리부</span></h5>
+                            <ul class="lv2-lists">
+                                <li><h6 class="org lv2"><span>회계총무/재무</span></h6></li>
+                                <li><h6 class="org lv2"><span>자재구매/외주관리, 생산관리</span></h6></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5 class="org lv1"><span>기술부</span></h5>
+                            <ul class="lv2-lists">
+                                <li><h6 class="org lv2"><span>생산/제조</span></h6></li>
+                                <li><h6 class="org lv2"><span>생산기술/설계</span></h6></li>
+                                <li><h6 class="org lv2"><span>입고검사/출하검수</span></h6></li>
+                                <li><h6 class="org lv2"><span>설치시공/유지보수</span></h6></li>
+                                <li><h6 class="org lv2"><span>공무</span></h6></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

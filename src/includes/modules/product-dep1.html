@@ -1,0 +1,59 @@
+@@if(!context.type2){
+    <div class="product-intro-box">
+        <div class="thumb-slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="/images/img/img-product.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/images/img/img-prod20.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/images/img/img-product.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/images/img/img-product.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="thumb-pagination"></div>
+        </div>
+        <div class="product-info">
+            <p class="tit">트로리바</p>
+            <p class="desc">주행, 횡행, 크레인 설치시 사용하며 각종 전기기기의 전원공급 장치로써 SYSTEM의 합리적인 운용에 효과적이며 CABLE 방식에서 탈선 화재위험을 전면 개선해 능률을 높이고, 안정성, 내구성, 경제성을 포함한 우수한 제품입니다. 표준길이는 3M 내열온도 80℃, 100℃ 2종류가 있습니다.</p>
+            <div class="btns">
+                <a href="" class="btn btn-border-white"><span>제품상세정보</span></a>
+                <a href="" class="btn btn-border-point2"><span>도면보기</span></a>
+            </div>
+        </div>
+        <script>
+            $(function(){
+                const productSlider = new Swiper('.thumb-slider .swiper-container', {
+                    loop: true,
+                    pagination: {
+                        el:'.thumb-slider .thumb-pagination',
+                        type: 'bullets'
+                    }
+                });
+            });
+        </script>
+    </div>
+}
+<div class="product-more">
+    @@if(!context.type2){
+        <h4 class="tit">트로리바 부속품</h4>
+    }
+    <div class="product-list-wrap size4">
+        <ul class="lists">
+            @@for(var i=0; i < list; i++){
+            <li>
+                <a href="@@sub.html" class="inner">
+                    <span class="thumb" style="background-image:url('/images/img/img-product.jpg');"></span>
+                    <p><span>트로리바</span></p>
+                </a>
+            </li>
+            }
+        </ul>
+    </div>
+</div>

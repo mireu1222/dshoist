@@ -1,0 +1,592 @@
+/* 회사소개 */
+.container.cate01 {
+    // 인사말
+    .greetings {
+        .tit {
+            text-align:center;
+            font-size:24px;
+            line-height:45px;
+            color:$point;
+            word-break:keep-all;
+            @include mobile {
+                padding:0 20px;
+                font-size:20px;
+                line-height:30px;
+                br {
+                    display:none;
+                }
+            }
+        }
+        .flex-box {
+            display:flex;
+            margin-top:20px;
+            @include mobile {
+                margin-top:30px;
+                flex-wrap:wrap;
+            }
+            .img {
+                @include calcs(width, 515px, 1200px);
+                @include calcs(padding-top, 65px, 1200px);
+                @include calcs(padding-left, 65px, 1200px);
+                background:url('/images/bg/bg-sub0101.jpg') 0 0 no-repeat;
+                background-size:43%;
+                @include mobile {
+                    order:2;
+                    width:100%;
+                    padding-top:14%;
+                    padding-left:14%;
+                }
+            }
+            .text {
+                width:50%;
+                margin-left:auto;
+                @include calcs(padding-top, 65px, 1200px);
+                @include mobile {
+                    width:100%;
+                    padding-top:0;
+                }
+                p {
+                    color:$cont;
+                    @include font-lg;
+                    word-break:keep-all;
+                    &.hello {
+                        margin-bottom:35px;
+                        color:$basic;
+                        font-weight:500;
+                        @include mobile {
+                            margin-bottom:28px;
+                        }
+                    }
+                    &.by {
+                        margin-top:60px;
+                        text-align:right;
+                        @include mobile {
+                            margin-top:40px;
+                        }
+                        strong {
+                            display:block;
+                            color:$basic;
+                            font-weight:500;
+                        }
+                    }
+                }
+            }
+        }
+        .company {
+            margin-top:70px;
+            @include mobile {
+                margin-top:30px;
+            }
+        }
+    }
+    // 회사개요
+    .overview {
+        display:flex;
+        .thumb {
+            @include calcs(width, 420px, 1200px);
+            @include tablet {
+                display:none;
+            }
+        }
+        .infos {
+            @include calcs(width, 730px, 1200px);
+            margin-left:auto;
+            @include tablet {
+                width:100%;
+            }
+            ul {
+                li {
+                    display:flex;
+                    &:first-child {
+                        .tit {
+                            border-top:1px solid $point;
+                        }
+                        .desc {
+                            border-top:1px solid $border;
+                        }
+                    }
+                    .tit {
+                        display:flex;
+                        align-items:center;
+                        width:220px;
+                        padding:25px;
+                        border-bottom:1px solid #d9e6f2;
+                        font-size:18px;
+                        font-weight:500px;
+                        color:$point;
+                        @include mobile {
+                            width:110px;
+                            padding:15px 0 15px 10px;
+                            font-size:16px;
+                            white-space:nowrap;
+                        }
+                    }
+                    .desc {
+                        width:calc(100% - 260px);
+                        margin-left:auto;
+                        padding:25px;
+                        border-bottom:1px solid #eee;
+                        @include font-lg;
+                        word-break:keep-all;
+                        @include mobile {
+                            width:calc(100% - 120px);
+                            padding:15px 0 15px 10px;
+                        }
+                        span {
+                            display:block;
+                            color:$cont;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 사업분야
+    .business-areas {
+        section {
+            margin-top:80px;
+            @include mobile {
+                margin-top:60px;
+            }
+            &:first-child {
+                margin-top:0;
+            }
+        }
+        .tit-wrap {
+            .tit {
+                color:$point;
+                font-size:24px;
+                font-weight:500;
+                @include mobile {
+                    font-size:20px;
+                }
+            }
+            .desc {
+                margin-top:15px;
+                @include font-lg;
+                word-break:keep-all;
+            }
+        }
+        .category-lists {
+            margin-top:40px;
+            overflow:hidden;
+            @include mobile {
+                margin-top:20px;
+            }
+            > ul.lists {
+                margin-top:-40px;
+                margin-left:-30px;
+                font-size:0;
+                @include mobile {
+                    margin-top:-30px;
+                    margin-left:-10px;
+                }
+                li {
+                    display:inline-block;
+                    vertical-align:top;
+                    width:25%;
+                    margin-top:40px;
+                    padding-left:30px;
+                    @include tablet {
+                        width:calc(100% / 3);
+                    }
+                    @include mobile {
+                        width:50%;
+                        margin-top:30px;
+                        padding-left:10px;
+                    }
+                    span {
+                        display:block;
+                        border:1px solid $border;
+                        img {
+                            width:100%;
+                        }
+                    }
+                    p {
+                        margin-top:10px;
+                        color:$cont;
+                        font-size:16px;
+                        line-height:24px;
+                        @include mobile {
+                            margin-top:5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 회사연혁
+    .tab-contents {
+        padding-top:60px;
+        @include mobile {
+            padding-top:30px;
+        }
+        .tit-wrap {
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            height:300px;
+            margin-bottom:60px;
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-position:center;
+            @include tablet {
+                height:240px;
+            }
+            @include mobile {
+                margin-bottom:30px;
+                height:180px;
+            }
+            @for $i from 1 through 4 {
+                &.tab0#{$i} {
+                    background-image:url('/images/bg/bg-sub0104-#{$i}.jpg');
+                }
+            }
+            h4 {
+                color:#fff;
+                font-size:32px;
+                font-weight:500;
+                text-align:center;
+                @include mobile {
+                    font-size:28px;
+                }
+                small {
+                    display:block;
+                    font-size:24px;
+                    font-weight:400;
+                    @include mobile {
+                        font-size:18px;
+                    }
+                    &::after {
+                        content:' ';
+                        display:block;
+                        width:35px;
+                        height:2px;
+                        margin:20px auto;
+                        background:#fff;
+                    }
+                }
+            }
+        }
+        .history-lists {
+            > li.years {
+                display:flex;
+                min-height:160px;
+                margin-top:-1px;
+                &:first-child {
+                    margin-top:0;
+                }
+                @include mobile {
+                    min-height:auto;
+                }
+                .year {
+                    @include calcs(width, 350px, 1200px);
+                    border-top:1px solid $point;
+                    padding-top:26px;
+                    padding-left:25px;
+                    color:$point;
+                    font-size:36px;
+                    font-weight:500;
+                    @include mobile {
+                        padding:20px 12px 0 0;
+                        text-align:right;
+                        font-size:28px;
+                    }
+                }
+                ul.lists {
+                    @include calcs(width, 800px, 1200px);
+                    margin-left:auto;
+                    border-top:1px solid $border;
+                    > li {
+                        padding:22px 0 22px 30px;
+                        border-bottom:1px solid #eee;
+                        @include mobile {
+                            padding:20px 0 20px 12px;
+                        }
+                        p {
+                            position:relative;
+                            padding-left:10px;
+                            color:$cont;
+                            @include font-lg;
+                            word-break:keep-all;
+                            &::before {
+                                content:' ';
+                                position:absolute;
+                                top:16px;
+                                left:0;
+                                width:3px;
+                                height:3px;
+                                border-radius:50%;
+                                background:$cont;
+                                @include mobile {
+                                    top:13px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 인증서현황
+    .certification {
+        overflow:hidden;
+        ul.lists {
+            display:flex;
+            flex-wrap:wrap;
+            @include calcs(margin-top, -40px, 1200px);
+            > li {
+                width:calc((100% - 10%) / 5);
+                @include calcs(margin-top, 40px, 1200px);
+                margin-left:2.5%;
+                &:nth-child(5n + 1) {
+                    margin-left:0;
+                }
+                @include mobile {
+                    width:calc((100% - 2.5%) / 2);
+                    margin-left:2.5%;
+                    &:nth-child(5n + 1) {
+                        margin-left:2.5%;
+                    }
+                    &:nth-child(odd) {
+                        margin-left:0;
+                    }
+                }
+                div {
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    height:100%;
+                    padding:10px;
+                    border:1px solid $border;
+                }
+            }
+        }
+    }
+    // 조직도
+    .organization-chart {
+        position:relative;
+        text-align:center;
+        &::before {
+            content:' ';
+            position:absolute;
+            top:50px;
+            left:50%;
+            width:1px;
+            height:200px;
+            background:$border;
+            @include mobile {
+            }
+        }
+        .org {
+            position:relative;
+            display:block;
+            width:125px;
+            height:125px;
+            border:1px solid $border;
+            border-radius:50%;
+            background:#fff;
+            color:$cont;
+            font-size:16px;
+            line-height:24px;
+            font-weight:500;
+            @include mobile {
+                width:99px;
+                height:99px;
+                font-size:14px;
+                line-height:22px;
+            }
+            &.ceo {
+                background:$point;
+                border-color:$point;
+                color:#fff;
+                font-size:18px;
+                @include mobile {
+                    font-size:16px;
+                }
+            }
+            &.lv1 {
+                background:#dce8f2;
+                border-color:#dce8f2;
+                font-size:18px;
+                @include mobile {
+                    font-size:16px;
+                }
+            }
+            span {
+                display:block;
+                position:absolute;
+                top:50%;
+                left:10px;
+                right:10px;
+                transform:translateY(-50%);
+                word-break:keep-all;
+            }
+        }
+        .org.ceo {
+            display:block;
+            margin:0 auto 60px;
+            @include mobile {
+                margin-bottom:30px;
+            }
+        }
+        ul.lists {
+            position:relative;
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            max-width:780px;
+            margin:0 auto;
+            &::before {
+                content:' ';
+                position:absolute;
+                top:62px;
+                left:5%;
+                right:5%;
+                height:1px;
+                background:$border;
+                @include mobile {
+                    top:47px;
+                }
+            }
+            > li {
+                position:relative;
+                &::before {
+                    content:' ';
+                    position:absolute;
+                    top:5%;
+                    bottom:5%;
+                    left:50%;
+                    width:1px;
+                    background:$border;
+                }
+                .lv2-lists {
+                    li {
+                        margin-top:50px;
+                        @include mobile {
+                            margin-top:25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 협력사
+    .partners {
+        overflow:hidden;
+        ul.lists {
+            display:flex;
+            flex-wrap:wrap;
+            @include calcs(margin-top, -30px, 1200px);
+            li {
+                width:calc((100% - 12.5%) / 6);
+                @include calcs(margin-top, 30px, 1200px);
+                margin-left:2.5%;
+                &:nth-child(6n + 1) {
+                    margin-left:0;
+                }
+                @include tablet {
+                    width:calc((100% - 5%) / 3);
+                    &:nth-child(6n + 1) {
+                        margin-left:2.5%
+                    }
+                    &:nth-child(3n + 1) {
+                        margin-left:0;
+                    }
+                }
+                span {
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    height:100%;
+                    padding:5px;
+                    border:1px solid $border;
+                    img {
+                        max-height:63px;
+                    }
+                }
+            }
+        }
+    }
+    // 오시는 길
+    .waytocome {
+        .map-wraps {
+            .root_daum_roughmap {
+                width:100% !important;
+                @include mobile {
+                    .wrap_map {
+                        height:280px !important;
+                    }
+                }
+                .wrap_controllers {
+                    display:none !important;
+                }
+                .map_border {
+                    display:none !important;
+                }
+            }
+        }
+        .map-info {
+            margin-top:60px;
+            @include mobile {
+                margin-top:30px;
+            }
+            li {
+                display:flex;
+                &:first-child {
+                    .tit {
+                        border-top:1px solid $point;
+                    }
+                    .desc {
+                        border-top:1px solid $border;
+                    }
+                }
+                .tit {
+                    @include calcs(width, 350px, 1200px);
+                    padding:22px 25px;
+                    border-bottom:1px solid #d9e6f2;
+                    color:$point;
+                    @include font-lg;
+                    font-weight:500;
+                    @include mobile {
+                        width:110px;
+                        padding:15px 0 15px 10px;
+                    }
+                    &::before {
+                        content:' ';
+                        display:inline-block;
+                        vertical-align:top;
+                        width:23px;
+                        height:23px;
+                        margin:6px 10px 0 0;
+                        @include mobile {
+                            margin-right:5px;
+                            width:20px;
+                            height:20px;
+                        }
+                    }
+                    &.icon01::before {
+                        background:url('/images/icon/icon-map01.png') center no-repeat;
+                        background-size:100%;
+                    }
+                    &.icon02::before {
+                        background:url('/images/icon/icon-map02.png') center no-repeat;
+                        background-size:100%;
+                    }
+                }
+                .desc {
+                    @include calcs(width, 800px, 1200px);
+                    margin-left:auto;
+                    padding:22px 25px;
+                    border-bottom:1px solid #eee;
+                    color:$cont;
+                    @include font-lg;
+                    @include mobile {
+                        width:calc(100% - 120px);
+                        padding:15px 0 15px 10px;
+                    }
+                }
+            }
+        }
+    }
+}

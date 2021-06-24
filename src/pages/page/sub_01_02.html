@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container cate01">
+            @@include('./layout/page-title.html', {
+                cate01 : '02',
+                title : '회사개요'
+            })
+            <div class="page-contents">
+                <div class="overview">
+                    <div class="thumb" aria-hidden="true">
+                        <img src="/images/img/img-sub0102.jpg" alt="">
+                    </div>
+                    <div class="infos">
+                        <ul>
+                            <li>
+                                <p class="tit">회사</p>
+                                <p class="desc">대성기업호이스트(주)</p>
+                            </li>
+                            <li>
+                                <p class="tit">설립일자</p>
+                                <p class="desc">
+                                    1999년 4월 대성기업(개인)설립 대표이사 김미자<br>
+                                    2013년 4월 대성기업호이스트(주) 대표이사 김미자
+                                </p>
+                            </li>
+                            <li>
+                                <p class="tit">소재지(본사)</p>
+                                <p class="desc">
+                                    경기도 화성시 팔탄면 지월길 32-2
+                                    <span>대지 : 992㎡ 건물 : 500㎡</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="tit">소재지(공장)</p>
+                                <p class="desc">
+                                    경기도 화성시 팔탄면 지월길 32-6
+                                    <span>대지 : 6,770㎡ 건물 : 2,760㎡</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="tit">연락처</p>
+                                <p class="desc">대표전화 : 031-366-2303<br>FAX : 031-366-2306</p>
+                            </li>
+                            <li>
+                                <p class="tit">사업자번호</p>
+                                <p class="desc">법인 : 143-81-01463<br>개인 : 119-02-43947</p>
+                            </li>
+                            <li>
+                                <p class="tit">자본금</p>
+                                <p class="desc">680,000,000원</p>
+                            </li>
+                            <li>
+                                <p class="tit">매출액</p>
+                                <p class="desc">5,000,000,000 ~ 10,000,000,000원</p>
+                            </li>
+                            <li>
+                                <p class="tit">총 인원수</p>
+                                <p class="desc">20명</p>
+                            </li>
+                            <li>
+                                <p class="tit">이메일</p>
+                                <p class="desc">dss2580@naver.com</p>
+                            </li>
+                            <li>
+                                <p class="tit">홈페이지</p>
+                                <p class="desc">www.dstr.co.kr</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

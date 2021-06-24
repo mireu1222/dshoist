@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container cate05">
+            @@include('./layout/page-title.html', {
+                cate05 : '01',
+                title : '뉴스&amp;공지'
+            })
+            <div class="page-contents">
+                @@include('./modules/list-filter.html')
+                @@include('./modules/notice-tbl.html', {
+                    notice: true,
+                    page: 'sub_05_01_view'
+                }) 
+                @@include('./modules/pagination.html')
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

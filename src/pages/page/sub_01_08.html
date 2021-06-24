@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container cate01">
+            @@include('./layout/page-title.html', {
+                cate01 : '08',
+                title : '오시는 길'
+            })
+            <div class="page-contents">
+                <div class="waytocome">
+                    <div class="map-wraps">
+                        <div id="daumRoughmapContainer1624263969154" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                    </div>
+                    <ul class="map-info">
+                        <li>
+                            <p class="tit icon01">주소</p>
+                            <p class="desc">경기도 화성시 팔탄면 지월길 30-5 (지월리 590-3번지)</p>
+                        </li>
+                        <li>
+                            <p class="tit icon02">고객센터</p>
+                            <p class="desc">031-366-2303</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+    <script charset="UTF-8">
+        new daum.roughmap.Lander({
+            "timestamp" : "1624263969154",
+            "key" : "26bfh",
+            "mapHeight" : "420"
+        }).render();
+    </script>
+</body>
+</html>

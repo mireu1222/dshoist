@@ -1,0 +1,164 @@
+<div class="tbl-wrap notice-tbl">
+    @@if(context.total) {
+    <p class="tbl-count">전체 <em>(6)</em></p>
+    }
+    @@if(context.scroll){
+    <div class="table-responsive">
+    }
+    <table class="table col-tbl">
+        <caption>@@caption</caption>
+        <colgroup>
+            @@if(context.sub0401type){
+                <col class="col1">
+                <col>
+                <col class="col2">
+            }
+            @@if(context.mypage02){
+                <col class="col1">
+                <col class="col3">
+                <col>
+                <col class="col2">
+                <col class="col1">
+            }
+            @@if(context.notice){
+                <col class="col1">
+                <col>
+                <col class="col2">
+            }
+        </colgroup>
+        @@if(context.sub0401type){
+        <thead>
+            <tr>
+                <th scope="col">번호</th>
+                <th scope="col">제목</th>
+                <th scope="col">등록일</th>
+            </tr>
+        </thead>
+        }
+        @@if(context.mypage02){
+        <thead>
+            <tr>
+                <th scope="col">번호</th>
+                <th scope="col">구분</th>
+                <th scope="col">제목</th>
+                <th scope="col">등록일</th>
+                <th scope="col">상태</th>
+            </tr>
+        </thead>
+        }
+        @@if(context.notice){
+        <thead>
+            <tr>
+                <th scope="col">번호</th>
+                <th scope="col">제목</th>
+                <th scope="col">등록일</th>
+            </tr>
+        </thead>
+        }
+        @@if(context.sub0401type){
+        <tbody>
+            <tr>
+                <td>999</td>
+                <td class="align-left">
+                    <!-- flag + title -->
+                    <div class="flag-title">
+                        <span class="flag flag-border-point">논문</span>
+                        <a href="/page/sub_04_01_view.html" class="link-basic">제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다.</a>
+                    </div>
+                    <!-- // flag + title -->
+                </td>
+                <td>2021.01.01</td>
+            </tr>
+            <!-- nodata -->
+            <tr>
+                <td colspan="3">
+                    <p class="nodata">게시글이 없습니다.</p>
+                </td>
+            </tr>
+            <!-- // nodata -->
+        </tbody>
+        }
+        @@if(context.mypage02){
+        <tbody>
+            <tr>
+                <td>999</td>
+                <td>세미나 문의 및 신청</td>
+                <td class="align-left"><a href="/page/mypage02_view.html" class="link-basic new">문의 제목이 들어갑니다. 문의 제목이 들어갑니다. 문의 제목이 들어갑니다.문의 제목이 들어갑니다.</a></td><!-- new 기능 필요할 경우 .new -->
+                <td>2021.01.01</td>
+                <td><span class="text-flag text-flag-point">완료</span></td><!-- 완료 case -->
+            </tr>
+            <tr>
+                <td>999</td>
+                <td>고객제안 사항</td>
+                <td class="align-left"><a href="/page/mypage02_view.html" class="link-basic">문의 제목이 들어갑니다.</a></td>
+                <td>2021.01.01</td>
+                <td><span class="text-flag text-flag-gray">처리중</span></td><!-- 처리중 case -->
+            </tr>
+            <tr>
+                <td>999</td>
+                <td>불편사항</td>
+                <td class="align-left"><a href="/page/mypage02_view.html" class="link-basic">문의 제목이 들어갑니다.</a></td>
+                <td>2021.01.01</td>
+                <td><span class="text-flag text-flag-point">완료</span></td><!-- 완료 case -->
+            </tr>
+            <tr>
+                <td>999</td>
+                <td>기타 건의사항</td>
+                <td class="align-left"><a href="/page/mypage02_view.html" class="link-basic">문의 제목이 들어갑니다.</a></td>
+                <td>2021.01.01</td>
+                <td><span class="text-flag text-flag-gray">처리중</span></td><!-- 처리중 case -->
+            </tr>
+        </tbody>
+        }
+        @@if(context.notice){
+        <tbody>
+            <!-- 공지글 case -->
+            <tr>
+                <td><span class="flag flag-point">공지</span></td>
+                <td class="align-left">
+                    <a href="/page/@@page.html" class="link-basic">제목이 들어갑니다.</a>
+                </td>
+                <td>2021.01.01</td>
+            </tr>
+            <!-- // 공지글 case -->
+            <!-- 새글 case -->
+            <tr>
+                <td>999</td>
+                <td class="align-left">
+                    <a href="/page/@@page.html" class="link-basic new">제목이 들어갑니다.</a>
+                </td>
+                <td>2021.01.01</td>
+            </tr>
+            <!-- // 새글 case -->
+            <!-- 새글+첨부파일 case -->
+            <tr>
+                <td>999</td>
+                <td class="align-left">
+                    <a href="/page/@@page.html" class="link-basic file new">제목이 들어갑니다.</a>
+                </td>
+                <td>2021.01.01</td>
+            </tr>
+            <!-- // 새글+첨부파일 case -->
+            <!-- 첨부파일 case -->
+            <tr>
+                <td>999</td>
+                <td class="align-left">
+                    <a href="/page/@@page.html" class="link-basic file">제목이 들어갑니다.</a>
+                </td>
+                <td>2021.01.01</td>
+            </tr>
+            <!-- // 첨부파일 case -->
+            <!-- nodata -->
+            <tr>
+                <td colspan="3">
+                    <p class="nodata">게시글이 없습니다.</p>
+                </td>
+            </tr>
+            <!-- // nodata -->
+        </tbody>
+        }
+    </table>
+    @@if(context.scroll){
+    </div>
+    }
+</div>

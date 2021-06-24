@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container cate01">
+            @@include('./layout/page-title.html', {
+                cate01 : '07',
+                title : '협력사'
+            })
+            <div class="page-contents">
+                <div class="partners">
+                    <ul class="lists">
+                        <li><span><img src="/images/img/img-ci1.png" alt=""></span></li>
+                        <li><span><img src="/images/img/img-ci2.png" alt=""></span></li>
+                        <li><span><img src="/images/img/img-ci3.png" alt=""></span></li>
+                        <li><span><img src="/images/img/img-ci4.png" alt=""></span></li>
+                        <li><span><img src="/images/img/img-ci5.png" alt=""></span></li>
+                        <li><span><img src="/images/img/img-ci6.png" alt=""></span></li>
+                        <li><span><img src="/images/img/img-ci7.png" alt=""></span></li>
+                        <li><span><img src="/images/img/img-ci8.png" alt=""></span></li>
+                        <li><span><img src="/images/img/img-ci9.png" alt=""></span></li>
+                        <li><span><img src="/images/img/img-ci10.png" alt=""></span></li>
+                        <li><span><img src="/images/img/img-ci11.png" alt=""></span></li>
+                        <li><span><img src="/images/img/img-ci12.png" alt=""></span></li>
+                        <li><span><img src="/images/img/img-ci13.png" alt=""></span></li>
+                        <li><span><img src="/images/img/img-ci14.jpg" alt=""></span></li>
+                        <li><span><img src="/images/img/img-ci15.png" alt=""></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,622 @@
+/* main */
+.container.main {
+    padding-bottom:100px;
+    @include mobile {
+        padding-bottom:60px;
+    }
+    // section common
+    section {
+        margin-top:95px;
+        @include tablet {
+            margin-top:65px;
+        }
+        @include mobile {
+            margin-top:45px;
+        }
+        .area {
+            @include contArea;
+        }
+        h2.title {
+            margin-bottom:75px;
+            font-size:45px;
+            line-height:55px;
+            font-weight:500;
+            @include tablet {
+                margin-bottom:45px;
+                font-size:40px;
+                line-height:50px;
+            }
+            @include mobile {
+                margin-bottom:30px;
+                font-size:38px;
+                line-height:42px;
+            }
+        }
+        a.btn-go {
+            position:relative;
+            display:inline-block;
+            padding-right:30px;
+            font-size:18px;
+            @include tablet {
+                padding-right:24px;
+                font-size:16px;
+            }
+            &::before {
+                content:' ';
+                position:absolute;
+                top:50%;
+                right:0;
+                width:16px;
+                height:1px;
+                background:$basic;
+            }
+            &::after {
+                content:' ';
+                position:absolute;
+                top:50%;
+                right:2px;
+                width:7px;
+                height:7px;
+                margin-top:-3px;
+                border:1px solid $basic;
+                border-top:none;
+                border-right:none;
+                transform:rotate(-135deg);
+            }
+        }
+    }
+    .control-btn {
+        position:absolute;
+        width:70px;
+        height:70px;
+        border-radius:50%;
+        z-index:10;
+        transition:background 0.2s linear;
+        @include tablet {
+            width:50px;
+            height:50px;
+        }
+        &:hover {
+            background:rgba(#fff, 0.5);
+        }
+        &::before {
+            content:' ';
+            position:absolute;
+            top:50%;
+            left:50%;
+            width:14px;
+            height:14px;
+            margin-top:-7px;
+            border:2px solid #fff;
+            border-top:none;
+            border-right:none;
+        }
+        &.prev {
+            &::before {
+                transform:rotate(45deg);
+                margin-left:-5px;
+            }
+        }
+        &.next {
+            &::before {
+                transform:rotate(-135deg);
+                margin-left:-9px;
+            }
+        }
+    }
+    // visual 
+    .main-visual {
+        position:relative;
+        .swiper-slide {
+            position:relative;
+            padding-top:690px;
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-position:center;
+            @include tablet {
+                padding-top:400px;
+            }
+            @include mobile {
+                padding-top:520px;
+            }
+            .text {
+                position:absolute;
+                top:200px;
+                left:50%;
+                transform:translateX(-50%);
+                width:100%;
+                @include contArea;
+                color:#fff;
+                @include tablet {
+                    top:100px;
+                }
+                @include mobile {
+                    top:150px;
+                }
+                .tit {
+                    font-size:50px;
+                    font-weight:500;
+                    @include tablet {
+                        font-size:44px;
+                    }
+                    @include mobile {
+                        font-size:36px;
+                    }
+                }
+                .desc {
+                    margin-top:25px;
+                    font-size:20px;
+                    line-height:38px;
+                    @include tablet {
+                        font-size:18px;
+                        line-height:34px;
+                    }
+                    @include mobile {
+                        line-height:30px;
+                    }
+                }
+            }
+        }
+        .control-paging {
+            display:flex;
+            align-items:center;
+            position:absolute;
+            top:410px;
+            left:50%;
+            margin-left:-600px;
+            z-index:10;
+            @include tablet {
+                top:auto;
+                bottom:85px;
+                margin-left:0;
+                left:20px;
+            }
+            @include mobile {
+                left:12px;
+                right:12px;
+            }
+            .swiper-pagination-progressbar {
+                position:relative;
+                width:420px;
+                height:5px;
+                background:rgba(#fff, 0.3);
+                @include mobile {
+                    width:300px;
+                    height:3px;
+                }
+            }
+            .swiper-pagination-progressbar-fill {
+                background:#fff;
+            }
+            .fractions {
+                margin-left:30px;
+                color:#fff;
+                font-size:18px;
+                font-weight:100;
+                @include tablet {
+                    margin-left:20px;
+                    font-size:16px;
+                }
+                @include mobile {
+                    margin-left:auto;
+                    font-size:14px;
+                }
+                .current {
+                    font-weight:500;
+                }
+            }
+        }
+        .control-btn {
+            left:50%;
+            bottom:160px;
+            background:rgba(#fff, 0.3);
+            margin-left:-600px;
+            @include tablet {
+                left:20px;
+                margin-left:0;
+                bottom:20px;
+            }
+            &.next {
+                margin-left:-518px;
+                @include tablet {
+                    margin-left:60px;
+                }
+            }
+        }
+    }
+    // section01
+    section.sect01 {
+        .area {
+            position:relative;
+            &::after {
+                content:' ';
+                position:absolute;
+                top:-95px;
+                bottom:-95px;
+                @include calcs(left, 970px, 1240px);
+                width:1px;
+                background:$border;
+                z-index:20;
+                @include tablet {
+                    top:-65px;
+                    bottom:-65px;
+                    left:auto;
+                    right:220px;
+                }
+                @include mobile {
+                    display:none;
+                }
+            }
+        }
+        .introduce-slider {
+            position:relative;
+            @include calcs(width, 950px, 1200px);
+            @include tablet {
+                width:calc(100% - 200px);
+            }
+            @include mobile {
+                width:100%;
+            }
+            .swiper-slide {
+                @include clearfix;
+                background:#fff;
+                .thumb {
+                    float:left;
+                    @include calcs(width, 480px, 950px);
+                    @include mobile {
+                        float:none;
+                        width:100%;
+                    }
+                }
+                .cont {
+                    @include calcs(margin-left, 500px, 950px);
+                    padding-top:55px;
+                    @include tablet {
+                        padding-top:0;
+                        padding-right:20px;
+                    }
+                    @include mobile {
+                        margin:20px 0 0;
+                    }
+                    .tit {
+                        font-size:30px;
+                        font-weight:500;
+                        @include tablet {
+                            font-size:26px;
+                        }
+                        @include mobile {
+                            font-size:24px;
+                        }
+                    }
+                    .desc {
+                        max-width:340px;
+                        margin-top:20px;
+                        font-size:18px;
+                        line-height:30px;
+                        word-break:keep-all;
+                        @include tablet {
+                            font-size:16px;
+                            line-height:24px;
+                        }
+                        @include mobile {
+                            max-width:none;
+                            margin-top:10px;
+                            padding-right:30px;
+                        }
+                    }
+                    a.btn-go {
+                        margin-top:45px;
+                        @include tablet {
+                            position:absolute;
+                            top:10px;
+                            right:20px;
+                            margin-top:0;
+                        }
+                        @include mobile {
+                            top:auto;
+                            bottom:62px;
+                            right:0;
+                        }
+                    }
+                }
+            }
+            .control-paging {
+                position:absolute;
+                top:0;
+                @include calcs(left, 500px, 950px);
+                bottom:auto;
+                width:auto;
+                color:#ccc;
+                font-size:16px;
+                z-index:10;
+                .swiper-pagination-current {
+                    color:$basic;
+                }
+                @include tablet {
+                    top:auto;
+                    bottom:0;
+                    left:auto;
+                    right:20px;
+                }
+                @include mobile {
+                    right:0;
+                }
+            }
+            .control-btn {
+                @include calcs(left, 500px, 950px);
+                bottom:0;
+                background:rgba(#333, 0.2);
+                &:hover {
+                    background:rgba(#333, 0.5);
+                }
+                &.next {
+                    margin-left:85px;
+                    @include tablet {
+                        margin-left:60px;
+                    }
+                    @include mobile {
+                        margin-left:0;
+                    }
+                }
+                @include mobile {
+                    top:-80px;
+                    left:auto;
+                    right:0;
+                    bottom:auto;
+                    &.prev {
+                        margin-right:60px;
+                    }
+                }
+            }
+        }
+        .next-thumb {
+            position:absolute;
+            bottom:0;
+            @include calcs(left, 971px, 1240px);
+            @include calcs(width, 250px, 1240px);
+            @include calcs(padding-top, 188px, 1240px);
+            background-repeat:no-repeat;
+            background-position:center;
+            background-size:cover;
+            cursor:pointer;
+            @for $i from 1 through 3 {
+                &.next#{$i} {
+                    background-image:url('/images/img/img-intro0#{$i}.jpg');
+                }
+            }
+            @include tablet {
+                left:auto;
+                right:20px;
+                width:200px;
+                height:150px;
+            }
+            @include mobile {
+                display:none;
+            }
+        }
+    }
+    // section02
+    section.sect02 {
+        padding:87px 0;
+        background:url('/images/bg/bg-main01.jpg') center no-repeat;
+        background-size:cover;
+        @include tablet {
+            padding:60px 0;
+        }
+        .txt-area {
+            @include contArea;
+            text-align:center;
+            color:#fff;
+            .tit {
+                font-size:40px;
+                font-weight:500;
+                @include tablet {
+                    font-size:36px;
+                }
+                @include mobile {
+                    font-size:30px;
+                }
+            }
+            .desc {
+                margin-top:40px;
+                @include font-lg;
+                @include mobile {
+                    margin-top:25px;
+                }
+            }
+        }
+    }
+    // section03
+    section.sect03 {
+        .product-lists {
+            border-top:1px solid $basic;
+            > li {
+                padding:60px 0;
+                border-bottom:1px solid $border;
+                @include tablet {
+                    padding:40px 0;
+                }
+                @include mobile {
+                    padding:25px 0;
+                }
+                .num {
+                    margin-bottom:30px;
+                    display:block;
+                    color:$point;
+                    font-size:18px;
+                    @include tablet {
+                        margin-bottom:20px;
+                    }
+                    @include mobile {
+                        margin-bottom:10px;
+                    }
+                }
+                .inner {
+                    display:flex;
+                    @include mobile {
+                        display:block;
+                    }
+                    .info {
+                        @include calcs(width, 500px, 1200px);
+                        @include mobile {
+                            width:100%;
+                        }
+                        .tit {
+                            font-size:32px;
+                            font-weight:500;
+                            @include tablet {
+                                font-size:28px;
+                            }
+                            @include mobile {
+                                font-size:26px;
+                            }
+                            small {
+                                display:block;
+                                margin-top:10px;
+                                font-size:20px;
+                                line-height:1;
+                                font-weight:400;
+                                @include mobile {
+                                    margin-top:8px;
+                                    font-size:18px;
+                                }
+                            }
+                        }
+                        .desc {
+                            margin-top:25px;
+                            color:$cont;
+                            font-size:16px;
+                            line-height:30px;
+                            word-break:keep-all;
+                            @include mobile {
+                                margin-top:15px;
+                                font-size:14px;
+                                line-height:24px;
+                            }
+                        }
+                    }
+                    .img-lists {
+                        @include calcs(width, 669px, 1200px);
+                        margin-left:auto;
+                        font-size:0;
+                        @include mobile {
+                            width:auto;
+                            margin-top:15px;
+                            margin-left:-13px;
+                        }
+                        li {
+                            display:inline-block;
+                            vertical-align:top;
+                            width:calc(100% / 3);
+                            padding-left:13px;
+                            &:nth-child(3) ~ li {
+                                margin-top:13px;
+                            }
+                            @include tablet {
+                                width:50%;
+                                &:nth-child(2) ~ li {
+                                    margin-top:13px;
+                                }
+                            }
+                            a {
+                                display:block;
+                                position:relative;
+                                img {
+                                    width:100%;
+                                }
+                                p {
+                                    position:absolute;
+                                    left:0;
+                                    right:0;
+                                    bottom:0;
+                                    padding:3px 10px;
+                                    background:rgba(#000, 0.4);
+                                    text-align:right;
+                                    color:$white;
+                                    font-size:15px;
+                                    line-height:22px;
+                                    @include mobile {
+                                        font-size:13px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // section04
+    section.sect04 {
+        .performance-wrap {
+            position:relative;
+            ul.lists {
+                font-size:0;
+                > li {
+                    display:inline-block;
+                    vertical-align:top;
+                    @include calcs(width, 380px, 1200px);
+                    @include calcs(margin-left, 30px, 1200px);
+                    &:first-child {
+                        margin-left:0;
+                    }
+                    @include mobile {
+                        width:100%;
+                        margin-top:25px;
+                        margin-left:0;
+                        &:first-child {
+                            margin-top:0;
+                        }
+                    }
+                    .inner {
+                        display:block;
+                        .thumb {
+                            display:block;
+                            margin-bottom:30px;
+                            @include calcs(padding-top, 240px, 380px);
+                            background-size:cover;
+                            background-position:center;
+                            background-repeat:no-repeat;
+                            @include mobile {
+                                margin-bottom:10px;
+                            }
+                        }
+                        .cate {
+                            font-size:16px;
+                            font-weight:500;
+                            @include mobile {
+                                font-size:14px;
+                            }
+                        }
+                        .tit {
+                            margin-top:20px;
+                            font-size:24px;
+                            @include textEllipsis;
+                            @include tablet {
+                                font-size:22px;
+                            }
+                            @include mobile {
+                                margin-top:10px;
+                                font-size:20px;
+                            }
+                        }
+                        .date {
+                            margin-top:35px;
+                            color:$gray;
+                            font-size:16px;
+                            @include mobile {
+                                margin-top:15px;
+                                font-size:14px;
+                            }
+                        }
+                    }
+                }
+            }
+            .btn-go {
+                position:absolute;
+                top:-40px;
+                right:0;
+            }
+        }
+    }
+}

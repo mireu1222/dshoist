@@ -1,0 +1,171 @@
+/* list */
+// input list
+.slt-lists {
+    font-size:0;
+    li {
+        display:inline-block;
+        vertical-align:top;
+    }
+    &.auto {
+        li {
+            margin-right:40px;
+            &:last-child {
+                margin-left:0;
+            }
+            @include tablet {
+                display:block;
+                margin-right:0;
+                margin-top:5px;
+                &:first-child {
+                    margin-top:0;
+                }
+            }
+        }
+    }
+}
+
+// bullet list
+.bullet-list {
+    color:$basic;
+    li {
+        padding-left:14px;
+        color:inherit;
+        @include font;
+        &::before {
+            content:'-';
+            display:inline-block;
+            vertical-align:top;
+            width:14px;
+            margin-left:-14px;
+        }
+        sup {
+            display:inline-block;
+            vertical-align:top;
+            font-size:0.8em;
+            line-height:1;
+        }
+    }
+    &.dot {
+        li {
+            margin-top:5px;
+            &:first-child {
+                margin-top:0;
+            }
+            &::before {
+                content:'·';
+            }  
+        }
+    }
+}
+
+// product list
+.product-list-wrap {
+    overflow:hidden;
+    &.size4 {
+        > ul.lists {
+            > li {
+                width:25%;
+                @include tablet {
+                    width:calc(100% / 3);
+                }
+                @include mobile {
+                    width:100%;
+                }
+            }
+        }
+    }
+    > ul.lists {
+        display:flex;
+        flex-wrap:wrap;
+        margin-top:-40px;
+        margin-left:-30px;
+        @include tablet {
+            margin-top:-30px;
+            margin-left:-20px;
+        }
+        @include mobile {
+            margin-top:0;
+            margin-left:0;
+        }
+        > li {
+            width:calc(100% / 3);
+            margin-top:40px;
+            padding-left:30px;
+            @include tablet {
+                margin-top:30px;
+                padding-left:20px;
+            }
+            @include mobile {
+                width:100%;
+                margin-top:10px;
+                padding-left:0;
+                &:first-child {
+                    margin-top:0;
+                }
+            }
+            a.inner {
+                position:relative;
+                display:block;
+                border:1px solid $border;
+                .thumb {
+                    position:relative;
+                    display:block;
+                    width:100%;
+                    @include calcs(padding-top, 280px, 380px);
+                    background-size:cover;
+                    background-repeat:no-repeat;
+                    background-position:center;
+                    &::before {
+                        content:' ';
+                        position:absolute;
+                        top:0;
+                        left:0;
+                        width:100%;
+                        height:100%;
+                        background:rgba(#000, 0.55);
+                        opacity:0;
+                        transition:opacity 0.2s ease-in-out;
+                    }
+                    &::after {
+                        content:' ';
+                        position:absolute;
+                        top:50%;
+                        left:50%;
+                        width:65px;
+                        height:65px;
+                        background:url('/images/icon/icon-more.png') center no-repeat;
+                        background-size:100%;
+                        transform:translate(-50%, -50%);
+                        opacity:0;
+                        transition:opacity 0.2s ease-in-out;
+                        @include tablet {
+                            width:40px;
+                            height:40px;
+                        }
+                    }
+                }
+                &:hover {
+                    .thumb::before,
+                    .thumb::after {
+                        opacity:1;
+                    }
+                }
+                p {
+                    position:relative;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    height:70px;
+                    padding:9px 10px;
+                    background:$disabled;
+                    span {
+                        display:block;
+                        font-size:18px;
+                        line-height:26px;
+                        font-weight:500;
+                    }
+                }
+            }
+        }
+    }
+}

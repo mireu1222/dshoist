@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html', {
+        main : true
+    })
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- main -->
+        <div id="container" class="container main">
+            <!-- visual -->
+            <div class="main-visual">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url('/images/img/img-visual01.jpg')">
+                            <div class="text">
+                                <h2 class="tit ft-serif">대성기업호이스트(주)</h2>
+                                <p class="desc">앞선기술로 미래를 선도하는 기업,<br>고객과 함께 합니다</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="background-image:url('/images/img/img-visual01.jpg')">
+                            <div class="text">
+                                <h2 class="tit ft-serif">대성기업호이스트(주)</h2>
+                                <p class="desc">앞선기술로 미래를 선도하는 기업,<br>고객과 함께 합니다</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="background-image:url('/images/img/img-visual01.jpg')">
+                            <div class="text">
+                                <h2 class="tit ft-serif">대성기업호이스트(주)</h2>
+                                <p class="desc">앞선기술로 미래를 선도하는 기업,<br>고객과 함께 합니다</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-paging">
+                    <div class="progressbar"></div>
+                    <div class="fractions"><em class="current"></em> / <em class="total"></em></div>
+                </div>
+                <button type="button" class="control-btn prev" aria-label="이전 슬라이드"></button>
+                <button type="button" class="control-btn next" aria-label="다음 슬라이드"></button>
+            </div>
+            <!-- // visual -->
+            <!-- section01 -->
+            <section class="sect01">
+                <div class="area">
+                    <h2 class="title">Our<br>Work</h2>
+                    <div class="introduce-slider">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="thumb">
+                                        <img src="/images/img/img-intro01.jpg" alt="">
+                                    </div>
+                                    <div class="cont">
+                                        <h3 class="tit">회사소개</h3>
+                                        <p class="desc">끊임없는 노력과 연구로 최고의 품질을 고객 여러분께 돌려드리겠습니다.</p>
+                                        <a href="/page/sub_01_01.html" class="btn-go">자세히 보기</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thumb">
+                                        <img src="/images/img/img-intro02.jpg" alt="">
+                                    </div>
+                                    <div class="cont">
+                                        <h3 class="tit">제품소개</h3>
+                                        <p class="desc">품질 인증마크 획득 및 경연 인증대상 수여로 기술의 우수성을 인정받고 있습니다.</p>
+                                        <a href="/page/sub_02_01.html" class="btn-go">자세히 보기</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thumb">
+                                        <img src="/images/img/img-intro03.jpg" alt="">
+                                    </div>
+                                    <div class="cont">
+                                        <h3 class="tit">상담신청</h3>
+                                        <p class="desc">제휴 및 견적의뢰를 보내어주시면 빠른 답변드리겠습니다.</p>
+                                        <a href="/page/sub_04_01.html" class="btn-go">자세히 보기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-paging"></div>
+                        <button type="button" class="control-btn prev" aria-label="이전 슬라이드"></button>
+                        <button type="button" class="control-btn next" aria-label="다음 슬라이드"></button>
+                    </div>
+                    <div class="next-thumb next2"></div>
+                </div>
+            </section>
+            <!-- // section01 -->
+            <!-- section02 -->
+            <section class="sect02">
+                <div class="txt-area">
+                    <h2 class="tit">대성기업호이스트(주)</h2>
+                    <p class="desc">기본을 철저히 준수하는 품질관리와 끊임없는 품질개선</p>
+                </div>
+            </section>
+            <!-- // section02 -->
+            <!-- section03 -->
+            <section class="sect03">
+                <div class="area">
+                    <h2 class="title">대성<br>제품</h2>
+                    <ul class="product-lists">
+                        <li>
+                            <span class="num">01</span>
+                            <div class="inner">
+                                <div class="info">
+                                    <h3 class="tit">전원공급장치<small>(저압 전속 부스 바)</small></h3>
+                                    <p class="desc">전원공급장치에는 주행, 횡행, 크레인 설치 시 사용하며 각종 전자기기의 전원공급 장치인 Trolley Bar와 Compact Bar, 고속으로 이동이 용이하도록 고안된 Heavy Bar, Duct Bar 그리고 고온, 다습, 염해 지역에 설치가 용이한 Copper - Head Rail Bar가 있습니다.</p>
+                                </div>
+                                <ul class="img-lists">
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod01.jpg" alt="Trolley Bar">
+                                            <p>Trolley Bar</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod02.jpg" alt="Compact Bar">
+                                            <p>Compact Bar</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod03.jpg" alt="Heavy Bar">
+                                            <p>Heavy Bar</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod04.jpg" alt="Duct Bar">
+                                            <p>Duct Bar</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod05.jpg" alt="Copper - Head Rail Bar">
+                                            <p>Copper - Head Rail Bar</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="num">02</span>
+                            <div class="inner">
+                                <div class="info">
+                                    <h3 class="tit">전원공급부속장치<small>(저압 전속 전선류)</small></h3>
+                                    <p class="desc">전원공급부속장치인 Pantograph &amp; Collector에는 300~800A SINGLE과 1000~2000A DOUBLE이 있습니다.</p>
+                                </div>
+                                <ul class="img-lists">
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod06.jpg" alt="Pantograph & Collector(300~800A SINGLE)">
+                                            <p>Pantograph & Collector<br>(300~800A SINGLE)</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod07.jpg" alt="Pantograph & Collector(1000~2000A DOUBLE)">
+                                            <p>Pantograph & Collector<br>(1000~2000A DOUBLE)</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="num">03</span>
+                            <div class="inner">
+                                <div class="info">
+                                    <h3 class="tit">가설전선 공급장치</h3>
+                                    <p class="desc">가설전선 공급장치에는 이동하는 기계에 전원이나 에어를 공급하기 위한 전선호스 등을 지지해 주는 장치인 Festoon Track Cable System과 H-Beam 및 I-Beam에 장착되는 전선 Cable 및 Hose 운반 Hanger 장치인 I-Beam Hanger Trolley 장치가 있습니다.</p>
+                                </div>
+                                <ul class="img-lists">
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod08.jpg" alt="Festoon Track">
+                                            <p>Festoon Track</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod09.jpg" alt="I-Beam Hanger">
+                                            <p>I-Beam Hanger</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="num">04</span>
+                            <div class="inner">
+                                <div class="info">
+                                    <h3 class="tit">전자 제어 시스템</h3>
+                                    <p class="desc">전자 제어 시스템에는 Soft Stater과 Silicon Rectifler 그리고 Control Panel등이 있습니다.</p>
+                                </div>
+                                <ul class="img-lists">
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod10.jpg" alt="Soft Starter">
+                                            <p>Soft Starter</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod12.jpg" alt="Silicon Rectifler">
+                                            <p>Silicon Rectifler</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod13.jpg" alt="Control Panel">
+                                            <p>Control Panel</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="num">05</span>
+                            <div class="inner">
+                                <div class="info">
+                                    <h3 class="tit">산업 운반 기계류<small>(설계, 제작, 설치)</small></h3>
+                                    <p class="desc">산업 운반 기계류에는 가장 보편적인 산업 설비 크레인의 한 종류인 Over Head Crane과 주로 실외에 설치되는 Gantry Crane, 작업장 벽에 설치하여 선회 운동을 하거나, 횡행 운동을 하도록 고안된 Jib Crane, 작업장 천정에 횡행용 거더 또는 주행 레일을 부착, 설치하는 Suspension Crane, 설치된 레일을 따라 이동하는 방식인 Monorail Crane, 그리고 초대형 겐트리 크레인의 하나인 Goliath Crane이 있습니다.</p>
+                                </div>
+                                <ul class="img-lists">
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod14.jpg" alt="Over Head Crane">
+                                            <p>Over Head Crane</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod15.jpg" alt="Gantry Crane">
+                                            <p>Gantry Crane</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod16.jpg" alt="Jib Crane">
+                                            <p>Jib Crane</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod17.jpg" alt="Suspension Crane">
+                                            <p>Suspension Crane</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod18.jpg" alt="Monorail Crane">
+                                            <p>Monorail Crane</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod19.jpg" alt="Goliath Crane">
+                                            <p>Goliath Crane</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="num">06</span>
+                            <div class="inner">
+                                <div class="info">
+                                    <h3 class="tit">운반하역기계전장품 생산</h3>
+                                    <p class="desc">운반하역기계전장품에는 Travelling Rail과 Wheel, 그리고 Rail 전장품 등이 있습니다.</p>
+                                </div>
+                                <ul class="img-lists">
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod20.jpg" alt="Travelling Rail">
+                                            <p>Travelling Rail</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod21.jpg" alt="Wheel">
+                                            <p>Wheel</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="/images/img/img-prod22.jpg" alt="Rail">
+                                            <p>Rail</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- // section03 -->
+            <!-- section04 -->
+            <section class="sect04">
+                <div class="area">
+                    <h2 class="title">공사<br>실적</h2>
+                    <div class="performance-wrap">
+                        <ul class="lists">
+                            <li>
+                                <a href="" class="inner">
+                                    <span class="thumb" aria-hidden="true" style="background-image:url('/images/img/img-prod-big01.jpg');"></span>
+                                    <p class="cate"><span class="blind">카테고리</span>대성의 실적</p>
+                                    <p class="tit"><span class="blind">제목</span>물류자동화 시스템 이동대차</p>
+                                    <p class="date"><span class="blind">등록일</span>2021.00.00</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="inner">
+                                    <span class="thumb" aria-hidden="true" style="background-image:url('/images/img/img-prod-big02.jpg');"></span>
+                                    <p class="cate"><span class="blind">카테고리</span>대성의 실적</p>
+                                    <p class="tit"><span class="blind">제목</span>특수목적용 각종산업기계</p>
+                                    <p class="date"><span class="blind">등록일</span>2021.00.00</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="inner">
+                                    <span class="thumb" aria-hidden="true" style="background-image:url('/images/img/img-prod-big03.jpg');"></span>
+                                    <p class="cate"><span class="blind">카테고리</span>대성의 실적</p>
+                                    <p class="tit"><span class="blind">제목</span>자동화 물류창고</p>
+                                    <p class="date"><span class="blind">등록일</span>2021.00.00</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="" class="btn-go">전체보기</a>
+                    </div>
+                </div>
+            </section>
+            <!-- // section04 -->
+        </div>
+        <!-- // main -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+
+    <script>
+        $(function(){
+            const visualSlide = new Swiper('.main-visual .swiper-container', {
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false
+                },
+                navigation: {
+                    prevEl: '.main-visual .control-btn.prev',
+                    nextEl: '.main-visual .control-btn.next',
+                },
+                pagination: {
+                    el: '.main-visual .control-paging .progressbar',
+                    type : 'progressbar',
+                },
+                on: {
+                    init: function(){
+                        var total = $('.main-visual .swiper-container .swiper-slide').length;
+                        $('.main-visual .control-paging .fractions .total').text(total-2);
+                    },
+                    slideChange: function(){
+                        $('.main-visual .control-paging .fractions .current').text(this.realIndex+1);
+                    }
+                }
+            });
+
+            const introSlide = new Swiper('.introduce-slider .swiper-container', {
+                loop: true,
+                navigation: {
+                    prevEl: '.introduce-slider .control-btn.prev',
+                    nextEl: '.introduce-slider .control-btn.next',
+                },
+                pagination: {
+                    el: '.introduce-slider .control-paging',
+                    type : 'fraction',
+                },
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                on: {
+                    slideChange: function(){
+                        var next = $('.next-thumb')
+                        next.removeClass('next1 next2 next3');
+                        
+                        if ( this.realIndex === 0 ) {
+                            next.addClass('next2');
+                        } else if ( this.realIndex === 1 ) {
+                            next.addClass('next3');
+                        } else if ( this.realIndex === 2 ) {
+                            next.addClass('next1');
+                        }
+                    }
+                }
+            });
+
+            $('.next-thumb').on('click', function(){
+                introSlide.slideNext();
+            });
+        });
+    </script>
+</body>
+</html>

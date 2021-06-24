@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container cate04">
+            @@include('./layout/page-title.html', {
+                cate04 : '02',
+                title : '카탈로그'
+            })
+            <div class="page-contents">
+                <div class="catalogue">
+                    <div class="infos">
+                        <h4 class="tit"><small>대성기업호이스트(주)</small>제품 카탈로그</h4>
+                        <p class="desc">대성기업호이스트(주)의 제품을 자세히 만나보세요.</p>
+                        <a href="" class="btn btn-lg btn-border-point no-round" download="대성기업호이스트(주)_제품.pdf"><span>PDF 다운로드</span></a>
+                    </div>
+                    <div class="img">
+                        <img src="/images/img/img-catalogue.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

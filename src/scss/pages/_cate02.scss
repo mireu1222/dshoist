@@ -1,0 +1,144 @@
+/* 제품소개, 공사실적 */
+.product-intro-box {
+    position:relative;
+    margin-bottom:100px;
+    @include mobile {
+        margin-bottom:60px;
+    }
+    .thumb-slider {
+        @include calcs(width, 650px, 1200px);
+        @include tablet {
+            width:100%;
+        }
+        .swiper-container {
+            border:1px solid $border;
+            .swiper-slide {
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                height:auto;
+                img {
+                    max-height:420px;
+                    @include mobile {
+                        max-height:300px;
+                    }
+                }
+            }
+        }
+        .thumb-pagination {
+            margin-top:50px;
+            text-align:center;
+            @include tablet {
+                margin-top:30px;
+            }
+            .swiper-pagination-bullet {
+                width:12px;
+                height:12px;
+                margin:0 6px;
+                background:#ddd;
+                opacity:1;
+                &.swiper-pagination-bullet-active {
+                    background:$point;
+                }
+            }
+        }
+    }
+    .product-info {
+        position:absolute;
+        bottom:0;
+        right:0;
+        @include calcs(width, 570px, 1200px);
+        padding:50px;
+        background:#214263;
+        z-index:10;
+        @include tablet {
+            position:relative;
+            bottom:auto;
+            right:auto;
+            width:100%;
+            margin-top:50px;
+        }
+        @include mobile {
+            padding:30px 20px;
+        }
+        .tit {
+            color:#fff;
+            font-size:26px;
+            @include mobile {
+                font-size:20px;
+            }
+        }
+        .desc {
+            margin-top:20px;
+            color:#fff;
+            @include font;
+            word-break:keep-all;
+        }
+        .btns {
+            display:flex;
+            margin-top:50px;
+            @include tablet {
+                margin-top:30px;
+            }
+            .btn {
+                flex:1;
+                margin-left:20px;
+                height:60px;
+                border-radius:0;
+                line-height:58px;
+                @include mobile {
+                    height:40px;
+                    line-height:38px;
+                    margin-left:10px;
+                }
+                &:first-child {
+                    margin-left:0;
+                }
+                &.btn-border-white:hover {
+                    background:#fff;
+                    color:#214263;
+                }
+                &.btn-border-point2:hover {
+                    background:$point2;
+                    color:#fff;
+                }
+            }
+        }
+    }
+}
+.product-more {
+    h4.tit {
+        margin-bottom:50px;
+        @include font-title;
+        font-weight:500;
+        text-align:center;
+        @include mobile {
+            margin-bottom:30px;
+        }
+    }
+}
+.prod-view {
+    text-align:center;
+    h4.tit {
+        position:relative;
+        margin-bottom:50px;
+        padding-bottom:26px;
+        text-align:center;
+        font-size:24px;
+        font-weight:500;
+        &::after {
+            content:' ';
+            position:absolute;
+            left:50%;
+            bottom:0;
+            width:50px;
+            height:2px;
+            margin-left:-25px;
+            background:$point;
+        }
+        @include mobile {
+            margin-bottom:30px;
+            font-size:20px;
+        }
+    }
+}
